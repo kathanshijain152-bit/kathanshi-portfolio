@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kathanshi Jain | Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    transition:0.3s;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 50px;
+    background:#020617;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav h1{
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+}
+
+/* HERO */
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero h2{
+    font-size:40px;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+.btns button{
+    margin:10px;
+}
+
+/* SOCIAL */
+.social i{
+    margin:10px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* SECTION */
+section{
+    padding:50px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:20px;
+    color:#38bdf8;
+}
+
+/* SKILLS */
+.skills{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.skill{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    width:150px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.skill:hover{
+    transform:translateY(-8px);
+}
+
+/* PROJECTS */
+.projects{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    width:260px;
+    flex-shrink:0;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+button{
+    padding:10px 20px;
+    background:linear-gradient(45deg,#38bdf8,#0ea5e9);
+    border:none;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    box-shadow:0 4px 15px rgba(56,189,248,0.3);
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+
+input, textarea{
+    width:80%;
+    padding:10px;
+    margin:10px;
+    border:none;
+    border-radius:5px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+}
+
+/* LIGHT MODE */
+.light{
+    background:white;
+    color:black;
+}
+
+.light .card,
+.light .skill{
+    background:#f1f5f9;
+    color:black;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    nav{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h1>MyPortfolio</h1>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button onclick="toggleMode()">🌙</button>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h2>Hello, I'm <span>Kathanshi Jain</span></h2>
+    <p>Digital Marketing Enthusiast | WordPress Developer | SEO Learner 🚀</p>
+
+    <div class="btns">
+        <a href="#projects"><button>View My Work</button></a>
+        <a href="#contact"><button>💼 Hire Me</button></a>
+    </div>
+
+    <div class="social">
+        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <p style="color:#22c55e;">● Available for Freelance & Jobs</p>
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2 class="title">My Skills</h2>
+    <div class="skills">
+        <div class="skill"><i class="fa-brands fa-wordpress"></i> WordPress</div>
+        <div class="skill"><i class="fa-solid fa-magnifying-glass"></i> SEO</div>
+        <div class="skill"><i class="fa-brands fa-html5"></i> HTML</div>
+        <div class="skill"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+        <div class="skill"><i class="fa-brands fa-js"></i> JavaScript</div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section>
+    <h2 class="title">About Me</h2>
+    <p style="text-align:center; max-width:600px; margin:auto;">
+        I am a passionate digital marketer and web developer. I have built real websites 
+        and worked on Instagram growth and SEO optimization. I am currently learning advanced skills 
+        to become a complete digital marketing expert.
+    </p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2 class="title">My Projects</h2>
+    <div class="projects">
+
+        <div class="card">
+            <h3>Bakery Website</h3>
+            <p>Responsive WordPress website with clean UI.</p>
+            <a href="https://your-live-site.com" target="_blank">
+                <button>Visit Site</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Shop Website</h3>
+            <p>Business website to showcase products.</p>
+            <a href="https://your-live-site.com" target="_blank">
+                <button>Visit Site</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio built with HTML, CSS & JS.</p>
+            <a href="https://your-live-site.com" target="_blank">
+                <button>Visit Site</button>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2 class="title">Contact Me</h2>
+    <div class="contact">
+        <input type="text" placeholder="Your Name"><br>
+        <input type="email" placeholder="Your Email"><br>
+        <textarea placeholder="Your Message"></textarea><br>
+        <button onclick="sendMsg()">Send</button>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Kathanshi Jain | Built with ❤️</p>
+</footer>
+
+<script>
+function sendMsg(){
+    alert("Message Sent Successfully!");
+}
+
+function toggleMode(){
+    document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
