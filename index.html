@@ -68,8 +68,19 @@ nav ul li a{
     color:#38bdf8;
 }
 
-.btns button{
-    margin:10px;
+/* BUTTON */
+button{
+    padding:10px 20px;
+    background:linear-gradient(45deg,#38bdf8,#0ea5e9);
+    border:none;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    box-shadow:0 4px 15px rgba(56,189,248,0.3);
+}
+
+button:hover{
+    transform:scale(1.05);
 }
 
 /* SOCIAL */
@@ -86,11 +97,11 @@ section{
 
 .title{
     text-align:center;
-    margin-bottom:20px;
+    margin-bottom:30px;
     color:#38bdf8;
 }
 
-/* SKILLS */
+/* SKILLS (TOP SMALL ICON SKILLS) */
 .skills{
     display:flex;
     justify-content:center;
@@ -111,6 +122,34 @@ section{
     transform:translateY(-8px);
 }
 
+/* NEW SKILL CARDS (ONE ROW) */
+.skills-row{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    padding:20px;
+}
+
+.skill-card{
+    background:#1c2a44;
+    padding:20px;
+    min-width:280px;
+    border-radius:12px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
+
+.skill-card h3{
+    margin-bottom:10px;
+}
+
 /* PROJECTS */
 .projects{
     display:flex;
@@ -129,20 +168,6 @@ section{
 
 .card:hover{
     transform:translateY(-8px);
-}
-
-button{
-    padding:10px 20px;
-    background:linear-gradient(45deg,#38bdf8,#0ea5e9);
-    border:none;
-    color:white;
-    border-radius:6px;
-    cursor:pointer;
-    box-shadow:0 4px 15px rgba(56,189,248,0.3);
-}
-
-button:hover{
-    transform:scale(1.05);
 }
 
 /* CONTACT */
@@ -172,7 +197,8 @@ footer{
 }
 
 .light .card,
-.light .skill{
+.light .skill,
+.light .skill-card{
     background:#f1f5f9;
     color:black;
 }
@@ -191,7 +217,7 @@ footer{
 
 <!-- NAVBAR -->
 <nav>
-    <h1>MyPortfolio</h1>
+    <h1>Kathanshi Portfolio</h1>
     <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -204,17 +230,17 @@ footer{
 <!-- HERO -->
 <div class="hero">
     <h2>Hello, I'm <span>Kathanshi Jain</span></h2>
-    <p>Digital Marketing Enthusiast | WordPress Developer | SEO Learner 🚀</p>
+    <p>Digital Marketing Fresher | Web Developer & SEO Learner 🚀</p>
 
-    <div class="btns">
+    <div>
         <a href="#projects"><button>View My Work</button></a>
         <a href="#contact"><button>💼 Hire Me</button></a>
     </div>
 
     <div class="social">
-        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
-        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
-        <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/kathanshi-jain-173b36402/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/kathanshi.17/"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:kathanshijain152@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
 
     <p style="color:#22c55e;">● Available for Freelance & Jobs</p>
@@ -223,6 +249,8 @@ footer{
 <!-- SKILLS -->
 <section id="skills">
     <h2 class="title">My Skills</h2>
+
+    <!-- small skills -->
     <div class="skills">
         <div class="skill"><i class="fa-brands fa-wordpress"></i> WordPress</div>
         <div class="skill"><i class="fa-solid fa-magnifying-glass"></i> SEO</div>
@@ -230,16 +258,25 @@ footer{
         <div class="skill"><i class="fa-brands fa-css3-alt"></i> CSS</div>
         <div class="skill"><i class="fa-brands fa-js"></i> JavaScript</div>
     </div>
-</section>
 
-<!-- ABOUT -->
-<section>
-    <h2 class="title">About Me</h2>
-    <p style="text-align:center; max-width:600px; margin:auto;">
-        I am a passionate digital marketer and web developer. I have built real websites 
-        and worked on Instagram growth and SEO optimization. I am currently learning advanced skills 
-        to become a complete digital marketing expert.
-    </p>
+    <!-- big skill cards in ONE ROW -->
+    <div class="skills-row">
+        <div class="skill-card">
+            <h3>📈 SEO Optimization</h3>
+            <p>On-page, Off-page SEO, keyword research, and ranking strategies.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>📱 Social Media Marketing</h3>
+            <p>Managing Instagram, Facebook & LinkedIn growth strategies.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>🎬 Video Editing</h3>
+            <p>Creating reels, ads, and promotional videos.</p>
+        </div>
+    </div>
+
 </section>
 
 <!-- PROJECTS -->
@@ -250,25 +287,19 @@ footer{
         <div class="card">
             <h3>Bakery Website</h3>
             <p>Responsive WordPress website with clean UI.</p>
-            <a href="https://your-live-site.com" target="_blank">
-                <button>Visit Site</button>
-            </a>
+            <a href="#"><button>Visit Site</button></a>
         </div>
 
         <div class="card">
             <h3>Shop Website</h3>
             <p>Business website to showcase products.</p>
-            <a href="https://your-live-site.com" target="_blank">
-                <button>Visit Site</button>
-            </a>
+            <a href="#"><button>Visit Site</button></a>
         </div>
 
         <div class="card">
             <h3>Portfolio Website</h3>
             <p>Personal portfolio built with HTML, CSS & JS.</p>
-            <a href="https://your-live-site.com" target="_blank">
-                <button>Visit Site</button>
-            </a>
+            <a href="#"><button>Visit Site</button></a>
         </div>
 
     </div>
